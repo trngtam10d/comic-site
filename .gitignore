@@ -5,9 +5,10 @@ node_modules/
 
 # Other files and folders
 .settings/
+.env
 
 # Executables
-*.swf
+*.wsf
 *.air
 *.ipa
 *.apk
