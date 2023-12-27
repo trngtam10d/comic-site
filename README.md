@@ -15,7 +15,13 @@
 
 ## How to use
 
+```
 `npm install` or `pnpm install` or `yarn`
+```
 
 `npm run build` You can play with docs and demos of your packages in local develop environment.
+
+```
+npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch
+```
 
