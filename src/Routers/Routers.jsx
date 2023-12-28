@@ -4,7 +4,7 @@ import { Home, Comic, SignIn, SignUp } from '@/pages';
 
 const Routers = () => {
     return (
-        <div>
+        <div className="min-h-screen bg-gray-200 selection:bg-sky-400 selection:text-white">
             <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />

@@ -9,7 +9,7 @@ module.exports = {
                 dark: "#1C1C1E",
             },
             fontFamily: {
-                roboto: ["Roboto", ...defaultTheme.fontFamily.sans],
+                roboto: ["Roboto", ...defaultTheme.fontFamily.sans]
             },
             gridTemplateColumns: {
                 sm: "repeat(auto-fill, minmax(130px, 1fr))",
