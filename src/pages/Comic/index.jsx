@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Footer, Navbar } from '@/layout'
+import { Header, Navbar } from '@/layout'
 
 const index = () => {
     return (

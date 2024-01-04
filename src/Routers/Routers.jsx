@@ -4,7 +4,7 @@ import { Home, Comic, SignIn, SignUp } from '@/pages';
 
 const Routers = () => {
     return (
-        <div>
+        <div className="max-w-6xl mx-auto px-2 py-2 my-2 space-y-2 min-h-screen">
             <Router>
                 <Routes>
                     <Route path="/" element={<Home />} />
