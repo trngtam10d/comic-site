@@ -39,7 +39,7 @@ const Header = () => {
                         </button>
                     </div>
                     {open ? (
-                        <div className="absolute left-0 z-10 mt-4 w-56 origin-top-left divide-y divide-gray-100 rounded-xl bg-white shadow-xl focus:outline-none" aria-labelledby="headlessui-menu-button-18" id="headlessui-menu-items-67" role="menu">
+                        <div className="absolute left-0 z-10 mt-4 w-56 origin-top-left divide-y divide-gray-100 rounded-xl bg-background shadow-xl focus:outline-none" aria-labelledby="headlessui-menu-button-18" id="headlessui-menu-items-67" role="menu">
                             <div className="space-y-2 p-4" role="none">
                                 <li className="flex cursor-pointer flex-row items-center space-x-3 rounded-lg p-2 text-lg font-medium text-gray-600 transition ease-in-out hover:-translate-y-1 hover:bg-indigo-400 hover:text-white" role="none">
                                     <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" role="none">
