@@ -10,7 +10,7 @@ const Description = forwardRef(
     ) => (
         <SheetPrimitive.Description
             className={cn(
-                "text-sm text-dark",
+                "text-sm",
                 className
             )}
             {...props}

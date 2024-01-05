@@ -1,6 +1,9 @@
 export { default as Svg } from './Svg';
 export { default as Button } from './Button';
 export { default as Loading } from './Loading';
+export { default as Spinner } from './Spinner';
+export { default as ToggleDarkMode } from './ToggleDarkMode';
+
 export { default as Sheet } from './Sheet';
 export { default as Trigger } from './Sheet/Trigger';
 export { default as Overlay } from './Sheet/Overlay';

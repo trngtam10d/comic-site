@@ -1,17 +1,29 @@
 import axios from 'axios';
 import { useQuery } from 'react-query';
 
-import anime from '../data';
+import jsonData from '../data';
 const url = "https://kitsu.io/api";
 
-export function getRecentAnime() {
-    const queryObj = useQuery("", async () => {
+export function getRecentManga() {
+    const queryObj = useQuery("search", async () => {
         return await axios
-            .get(url + `/edge/anime?filter[status]=current&sort=-averageRating`)
+            .get(url + `/edge/manga?filter[status]=current&sort=-averageRating`)
             .catch((error) => {
-                return { data: anime, isLoading: false };
+                return { data: jsonData, isLoading: false };
             })
     });
-    const result = queryObj.isError ? anime.data : queryObj.data?.data.data;
+    const result = queryObj.isError ? jsonData.data : queryObj.data?.data.data;
+    return { isLoading: queryObj.isLoading, data: result };
+}
+
+export function getTrending() {
+    const queryObj = useQuery("trending", async () => {
+        return await axios
+            .get(url + `/edge/trending/manga`)
+            .catch((error) => {
+                return { data: jsonData, isLoading: false };
+            })
+    });
+    const result = queryObj.isError ? jsonData.data : queryObj.data?.data.data;
     return { isLoading: queryObj.isLoading, data: result };
 }

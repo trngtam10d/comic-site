@@ -19,7 +19,12 @@
 `npm install` or `pnpm install` or `yarn`
 ```
 
-`npm run build` You can play with docs and demos of your packages in local develop environment.
+`npm run build` 
+You can play with docs and demos of your packages in local develop environment.
+
+```
+`npm start` and `npm run build`
+```
 
 ```
 npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch

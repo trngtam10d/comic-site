@@ -4,10 +4,6 @@ import * as Framer from "framer-motion";
 const LazyImage = ({
     src,
     alt,
-    isAnimated = true,
-    transition,
-    animate,
-    initial,
     className,
 }) => {
     const imgRef = useRef(null);
@@ -35,9 +31,6 @@ const LazyImage = ({
             src={imgSrc}
             alt={alt}
             ref={imgRef}
-            animate={isAnimated && animate}
-            transition={isAnimated && transition}
-            initial={isAnimated && initial}
         />
     );
 };
