@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { cva } from "class-variance-authority";
 
-import { Sheet, Trigger, Content, Header, Footer, Description, Title } from "@/components";
+import { Sheet, Trigger, Content, Header, Title, ToggleDarkMode } from "@/components";
 import { cn } from "@/utils/helpers/class";
 import jsonData from "@/services/data";
 
@@ -50,6 +50,10 @@ export default function SideNav() {
                             </Link>
                             <span className="text-sm hover:underline hover:text-blue cursor-pointer">No account yet? please create account</span>
                         </div>
+                    </div>
+
+                    <div className="flex">
+                        <ToggleDarkMode />
                     </div>
                 </Header>
             </Content>

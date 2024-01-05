@@ -4,7 +4,7 @@ import { Navigation } from "swiper/modules";
 import { Link } from 'react-router-dom';
 
 import { getTrending } from '@/services/api/rapid';
-import { Loading } from '@/components';
+import { Loading, Button } from '@/components';
 import LazyImage from '@/utils/helpers/helpers';
 
 export default function Trending() {
@@ -36,7 +36,14 @@ export default function Trending() {
 
     return (
         <div className="z-50 space-y-8 rounded-3xl bg-background p-8">
-            <p className="text-3xl font-bold antialiased">Trending</p>
+            <div className="flex-row 2xl:flex flex">
+                <div className="2xl:basis-10/12 basis-10/12">
+                    <p className="text-3xl font-bold antialiased">Trending</p>
+                </div>
+                <div className="2xl:basis-2/12 2xl:flex 2xl:justify-center basis-2/12">
+                    <Button />
+                </div>
+            </div>
             <div>
                 {isLoading ? (
                     <Loading />
@@ -52,22 +59,25 @@ export default function Trending() {
                                     spaceBetween: 10,
                                 },
                                 1600: {
-                                    slidesPerView: 4,
+                                    slidesPerView: 5,
                                     spaceBetween: 10,
                                 },
                                 1450: {
-                                    slidesPerView: 4,
+                                    slidesPerView: 5,
                                     spaceBetween: 10,
                                 },
                                 1200: {
-                                    slidesPerView: 4,
+                                    slidesPerView: 5,
                                     spaceBetween: 10,
                                 },
-                                900: {
+                                800: {
                                     slidesPerView: 4,
                                 },
+                                400: {
+                                    slidesPerView: 3,
+                                },
                                 300: {
-                                    slidesPerView: 2,
+                                    slidesPerView: 3,
                                 },
                             }}
                             modules={[Navigation]}

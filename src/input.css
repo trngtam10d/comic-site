@@ -10,7 +10,14 @@
 
 @layer base {
     html {
-        font-family: sans-serif;
+        font-family: Poppins,sans-serif;
+    }
+    * {
+        @apply border-border;
+    }
+
+    body {
+        @apply bg-background text-foreground;
     }
 }
 
@@ -58,16 +65,6 @@
         --border: 0 0% 14.9%;
         --input: 0 0% 14.9%;
         --ring: 0 72.2% 50.6%;
-    }
-}
-
-@layer base {
-    * {
-        @apply border-border;
-    }
-
-    body {
-        @apply bg-background text-foreground;
     }
 }
 

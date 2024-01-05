@@ -10,7 +10,7 @@ const Title = forwardRef(
     ) => (
         <SheetPrimitive.Title
             className={cn(
-                "text-lg font-semibold",
+                "text-lg font-semibold text-foreground",
                 className
             )}
             {...props}
