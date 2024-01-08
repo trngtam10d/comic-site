@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Carousel, Navbar, Trending } from '@/layout';
+import { Carousel, Navbar, Trending, Filter } from '@/layout';
 import 'swiper/css';
 
 const Home = () => {
@@ -14,6 +14,8 @@ const Home = () => {
                         <Trending />
                     </div>
                 </div>
+
+                <Filter />
 
                 <div className="flex-row space-x-4 2xl:flex border-b">
                     <div className="2xl:basis-8/12">

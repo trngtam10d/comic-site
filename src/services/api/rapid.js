@@ -27,3 +27,17 @@ export function getTrending() {
     const result = queryObj.isError ? jsonData.data : queryObj.data?.data.data;
     return { isLoading: queryObj.isLoading, data: result };
 }
+
+export function getFilterManga() {
+    const queryObj = useQuery("filter", async (page, limit, sort) => {
+        return await axios
+            .get(url + `/edge/manga?page=${page}&limit=${limit}&sort=-${sort}`)
+            .catch((error) => {
+                return { data: jsonData, isLoading: false };
+            })
+    });
+    console.log(queryObj);
+
+    const result = queryObj.isError ? jsonData.data : queryObj.data?.data.data;
+    return { isLoading: queryObj.isLoading, data: result };
+}

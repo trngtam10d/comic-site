@@ -1,11 +1,9 @@
 import React from "react";
 
-import { LoadingOutlined } from "@ant-design/icons";
-
 export default function Loading() {
     return (
-        <div className="flex flex-column gap-6 items-center justify-center h-full w-full ml-auto">
-            <div className="border-gray-300 h-10 w-10 animate-spin rounded-full border-4 border-t-blue-600" />
+        <div className="flex flex-column gap-6 justify-center items-center h-full w-full ml-auto">
+            <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-b-4 border-purple-500"></div>
         </div>
     );
 }

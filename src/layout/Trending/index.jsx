@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from "swiper/modules";
 import { Link } from 'react-router-dom';
@@ -9,7 +9,6 @@ import LazyImage from '@/utils/helpers/helpers';
 
 export default function Trending() {
     const { isLoading, data } = getTrending();
-    const ref = useRef(null);
 
     const TrendingList = data?.map((element, index) => {
         const item = element.attributes;

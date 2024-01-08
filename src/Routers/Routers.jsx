@@ -3,11 +3,12 @@ import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { Home, SignIn, SignUp, Manga } from '@/pages';
 import { Spinner } from '@/components';
 
-const Routers = () => {
+
+export default function App() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        setTimeout(() => setLoading(false), 1000);
+        setTimeout(() => setLoading(false), 2000);
     }, []);
 
     return (
@@ -26,5 +27,3 @@ const Routers = () => {
         </div>
     );
 };
-
-export default Routers;
