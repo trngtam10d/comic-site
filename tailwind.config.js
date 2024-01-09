@@ -56,6 +56,8 @@ export default {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        first: "10px 0 0 10px",
+        last: "0 10px 10px 0"
       },
       keyframes: {
         "accordion-down": {
@@ -70,6 +72,8 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'spin-slow': 'spin 2s linear infinite',
+        'spin-card': 'fadeIn .35s ease forwards'
       },
       gridTemplateColumns: {
         sm: "repeat(auto-fill, minmax(130px, 1fr))",
@@ -78,6 +82,19 @@ export default {
       boxShadow: {
         '3m': 'black 20em 10px 15em 2em inset',
         '3l': 'black 10em 5px 5em 0 inset'
+      },
+      width: {
+        'card': 'calc(100% / 6 - 1rem)'
+      },
+      backgroundImage: {
+        'card-wrapper': 'linear-gradient(0deg,#343a40 8%,#343a40c1 16%,#343a4069 24%,#343a4000 32%)'
+      },
+      padding: {
+        'card-rate': '1px 4px' ,
+        'tab': '7px 10px'
+      },
+      margin: {
+        'dot': '3px 6px'
       }
     },
   },

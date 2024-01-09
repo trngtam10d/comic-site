@@ -3,6 +3,7 @@ export { default as Loading } from './Loading';
 export { default as Spinner } from './Spinner';
 export { default as ToggleDarkMode } from './ToggleDarkMode';
 export { default as Item } from './Item';
+export { default as TypeManga } from './TypeManga';
 
 export { default as Sheet } from './Sheet';
 export { default as Trigger } from './Sheet/Trigger';
