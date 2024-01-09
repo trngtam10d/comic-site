@@ -37,7 +37,7 @@ export default function Trending() {
         <div className="z-50 space-y-8 rounded-3xl bg-background p-8">
             <div className="flex-row 2xl:flex flex">
                 <div className="2xl:basis-10/12 basis-10/12">
-                    <p className="text-3xl font-bold antialiased">Trending</p>
+                    <p className="text-xl font-bold antialiased">Trending</p>
                 </div>
                 <div className="2xl:basis-2/12 2xl:flex 2xl:justify-center basis-2/12">
                     <Button />
