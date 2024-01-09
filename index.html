@@ -12,6 +12,15 @@
 <body>
     <div id="root"></div>
     <script type="module" src="/src/index.jsx"></script>
+    <script>
+        (function () {
+            try {
+                const mode = localStorage.getItem('darkToggle');
+                if (!JSON.parse(mode)) return;
+                document.documentElement.classList.add('dark');
+            } catch (e) {}
+        })();
+    </script>
 </body>
 
 </html>

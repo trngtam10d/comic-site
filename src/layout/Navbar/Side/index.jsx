@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { cva } from "class-variance-authority";
 
-import { Sheet, Trigger, Content, Header, Footer, Description, Title } from "@/components";
+import { Sheet, Trigger, Content, Header, Title, ToggleDarkMode } from "@/components";
 import { cn } from "@/utils/helpers/class";
 import jsonData from "@/services/data";
 
@@ -51,6 +51,10 @@ export default function SideNav() {
                             <span className="text-sm hover:underline hover:text-blue cursor-pointer">No account yet? please create account</span>
                         </div>
                     </div>
+
+                    <div className="flex">
+                        <ToggleDarkMode />
+                    </div>
                 </Header>
             </Content>
         </Sheet>
@@ -62,10 +66,8 @@ const buttonVariants = cva(
     variants: {
         variant: {
             default: "bg-primary hover:bg-primary/90",
-            destructive:
-                "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-            outline:
-                "border border-input bg-teal-200 hover:bg-gray-300 hover:text-red",
+            destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+            outline: "border border-input bg-teal-200 hover:bg-gray-300 hover:text-red",
             secondary: "bg-secondary hover:bg-secondary/80",
             ghost: "hover:bg-gray-400",
             link: "text-primary underline-offset-4 hover:underline",
@@ -81,5 +83,4 @@ const buttonVariants = cva(
         variant: "default",
         size: "default",
     },
-}
-)
+});
