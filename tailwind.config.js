@@ -95,7 +95,7 @@ export default {
       },
       margin: {
         'dot': '3px 6px'
-      }
+      },
     },
   },
   plugins: [

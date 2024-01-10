@@ -63,3 +63,7 @@ export function getTopManhua() {
 export function getMangaById(id) {
     return handleResponse(`manga-${id}`, `manga/${id}`);
 }
+
+export function getTopCharacters() {
+    return handleResponse('characters', "top/characters?limit=5");
+}

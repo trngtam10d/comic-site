@@ -4,6 +4,7 @@ import { easeOut, motion, useInView } from "framer-motion";
 import { getMangaById } from "@/services/api/jikan";
 import { Loading } from "..";
 import { Link } from "react-router-dom";
+import { StarOutlined } from "@ant-design/icons";
 
 export default function TypeManga(props) {
     const mangaList = props.data.data?.data.map((el, index) => {
@@ -55,6 +56,7 @@ export function MouseOverCard(props) {
                     <h1>{manga?.title || manga?.title_japanese}</h1>
                     <div className="flex justify-between">
                         <span className="flex justify-center items-center bg-[#ffdd95] font-bold text-[10px] p-card-rate text-indigo-500">
+                            <StarOutlined />
                             {manga?.score || "?"}
                         </span>
                         <span className="bg-[#b0e3af] font-bold text-[10px] p-card-rate text-indigo-500">{manga?.type || "?"}</span>

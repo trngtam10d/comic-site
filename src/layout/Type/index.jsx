@@ -10,10 +10,10 @@ import {
     getTopNovel,
     getTopOneShot
 } from '@/services/api/jikan';
+import { TopCharacter } from '..';
 
 const Type = () => {
     const [selector, setSelector] = useState(1);
-    let isLoading = true;
 
     const typeMap = {
         1: getTopManga,
@@ -53,7 +53,7 @@ const Type = () => {
                             <div className="text-xl font-bold antialiased">Top {typeName[selector]}</div>
                         </div>
                         <div className="2xl:basis-9/12 2xl:flex 2xl:justify-end basis-8/12">
-                            <div className="text-xs border flex rounded-full flex-wrap justify-end">
+                            <div className="text-xs md:border flex rounded-full flex-wrap justify-end">
                                 {[1, 2, 3, 4, 5, 6, 7].map((type) => (
                                     <button
                                         key={type}
@@ -73,16 +73,7 @@ const Type = () => {
                 </div>
             </div>
             <div className="2xl:basis-4/12">
-                <div className="z-50 space-y-8 rounded-3xl bg-background p-8">
-                    <p className="text-3xl font-bold antialiased">Top 10</p>
-                    <div className="grid grid-cols-1 gap-2">
-                        <div>01</div>
-                        <div>09</div>
-                        <div>09</div>
-                        <div>09</div>
-                        <div>09</div>
-                    </div>
-                </div>
+                <TopCharacter/>
             </div>
         </div>
     );

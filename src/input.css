@@ -82,6 +82,11 @@
         border-radius: 15px;
         font-size: 13px;
     }
+
+    .characters {
+        @apply text-indigo-500;
+        border-bottom: 4px solid;
+    }
 }
 
 body {
