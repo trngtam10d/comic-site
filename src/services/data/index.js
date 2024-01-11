@@ -2075,7 +2075,7 @@ const jsonData = {
         },
         {
             text: "Manga",
-            href: "/mange",
+            href: "/manga",
         },
     ],
 };

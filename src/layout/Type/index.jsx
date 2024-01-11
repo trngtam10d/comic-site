@@ -29,7 +29,7 @@ const Type = () => {
         1: 'Manga',
         2: 'Novel',
         3: 'Light Novel',
-        4: 'OneShot',
+        4: 'One-shot',
         5: 'Donjin',
         6: 'Manhwa',
         7: 'Manhua',

@@ -65,5 +65,5 @@ export function getMangaById(id) {
 }
 
 export function getTopCharacters() {
-    return handleResponse('characters', "top/characters?limit=5");
+    return handleResponse('characters', "top/characters?limit=6");
 }
