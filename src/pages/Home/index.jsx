@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className="w-full md:px-6 md:py-6">
+            <div className="w-full">
                 <Error />
                 <Footer />
             </div>

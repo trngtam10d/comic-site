@@ -42,7 +42,7 @@ export default function TopCharacter() {
 
     return (
         <>
-            <div className="space-y-8 bg-card p-8">
+            <div className="space-y-8 bg-card p-4">
                 <div className="text-xl font-bold antialiased">Top Characters (MyAnimeList)</div>
                 {isLoading ? (
                     <Loading />

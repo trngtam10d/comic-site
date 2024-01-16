@@ -34,7 +34,7 @@ const Navbar = () => {
 
     return (
         <nav className="sticky top-0 py-3 px-2 bg-background border-b shadow-sm z-10">
-            <div className="flex items-center max-w-6xl mx-auto justify-between">
+            <div className="flex items-center w-full mx-auto justify-between">
                 <SideNav/>
                 <div className=" flex items-center space-x-3">
                     <button className="inline-flex items-center justify-center whitespace-nowrap rounded-tr-2xl text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2 space-x-3 w-full" type="button">

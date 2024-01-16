@@ -96,6 +96,10 @@ export default {
       margin: {
         'dot': '3px 6px'
       },
+      maxWidth: {
+        'primary': 'calc(70% - 40px)',
+        'secondary': 'calc(30% - 40px)'
+      }
     },
   },
   plugins: [
