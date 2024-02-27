@@ -36,7 +36,7 @@ export default function Carousel() {
     });
 
     return (
-        <div className="pb-6 md:px-6">
+        <div className="py-6 p-4">
             {isLoading ? (
                 <Loading />
             ) : (

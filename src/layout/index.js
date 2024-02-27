@@ -6,3 +6,5 @@ export { default as Filter } from './Filter';
 export { default as Type } from './Type';
 export { default as Footer } from './Footer';
 export { default as TopCharacter } from './Trending/Top';
+export { default as Error } from './Error';
+export { default as Recommended } from './Recommended';

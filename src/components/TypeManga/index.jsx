@@ -125,7 +125,7 @@ export function Card(props) {
             onMouseOut={() => setHover(false)}
 
         >
-            <a className="flex flex-col no-underline min-w-full">
+            <Link className="flex flex-col no-underline min-w-full" to={`/manga/jikan/${manga.mal_id}`} onClick={() => window.scrollTo({ top: 0 })}>
                 <div className={`h-[200px] relative w-full before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-card-wrapper`}>
                     {width > 1150 && (
                         <div className={`absolute h-full w-full top-0 left-0 bg-[#343a407c] z-[3] backdrop-blur ${hover ? 'opacity-100' : 'opacity-0'}`}></div>
@@ -152,7 +152,7 @@ export function Card(props) {
                         <span className="ml-1">{manga.type}</span>
                     </div>
                 </div>
-            </a>
+            </Link>
             {width > 1150 && hover && manga && (
                 <MouseOverCard id={manga.mal_id} />
             )}

@@ -21,7 +21,7 @@ export default function Filter() {
         && favorite.isLoading;
 
     return (
-        <div className="flex-row space-x-4 2xl:flex border-b">
+        <div className="flex-row 2xl:flex border-b">
             {isLoading ? (
                 <Loading />
             ) : (
@@ -29,9 +29,9 @@ export default function Filter() {
                     <div className="2xl:basis-4/12">
                         <Item heading={`Top Publishing Manga`} data={publishing} key={1} />
                     </div>
-                    <div className="2xl:basis-4/12">
+                    {/* <div className="2xl:basis-4/12">
                         <Item heading={`Top Upcoming Manga`} data={upcoming} key={2} />
-                    </div>
+                    </div> */}
                     <div className="2xl:basis-4/12">
                         <Item heading={`Highest Rated Manga`} data={favorite} key={3} />
                     </div>

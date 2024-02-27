@@ -10,7 +10,6 @@ import {
     getTopNovel,
     getTopOneShot
 } from '@/services/api/jikan';
-import { TopCharacter } from '..';
 
 const Type = () => {
     const [selector, setSelector] = useState(1);
@@ -29,7 +28,7 @@ const Type = () => {
         1: 'Manga',
         2: 'Novel',
         3: 'Light Novel',
-        4: 'OneShot',
+        4: 'One-shot',
         5: 'Donjin',
         6: 'Manhwa',
         7: 'Manhua',
@@ -45,35 +44,30 @@ const Type = () => {
     };
 
     return (
-        <div className="flex-row space-x-4 2xl:flex border-b">
-            <div className="2xl:basis-8/12">
-                <div className="space-y-8 bg-card p-8">
-                    <div className="flex-row 2xl:flex flex">
-                        <div className="2xl:basis-3/12 basis-4/12">
-                            <div className="text-xl font-bold antialiased">Top {typeName[selector]}</div>
-                        </div>
-                        <div className="2xl:basis-9/12 2xl:flex 2xl:justify-end basis-8/12">
-                            <div className="text-xs md:border flex rounded-full flex-wrap justify-end">
-                                {[1, 2, 3, 4, 5, 6, 7].map((type) => (
-                                    <button
-                                        key={type}
-                                        className={`p-tab border ${selector === type ? "selected" : ""} 
+        <div className="2xl:basis-8/12">
+            <div className="space-y-8 bg-card p-4">
+                <div className="flex-row 2xl:flex flex">
+                    <div className="2xl:basis-3/12 basis-4/12">
+                        <div className="text-xl font-bold antialiased">Top {typeName[selector]}</div>
+                    </div>
+                    <div className="2xl:basis-9/12 2xl:flex 2xl:justify-end basis-8/12">
+                        <div className="text-xs md:border flex rounded-full flex-wrap justify-end">
+                            {[1, 2, 3, 4, 5, 6, 7].map((type) => (
+                                <button
+                                    key={type}
+                                    className={`p-tab border ${selector === type ? "selected" : ""} 
                                         ${type === 1 ? "first:rounded-first" : ""} 
                                         ${type === 7 ? "last:rounded-last" : ""}`}
-                                        onClick={() => setSelector(type)}
-                                    >
-                                        {typeName[type]}
-                                    </button>
-                                ))}
-                            </div>
+                                    onClick={() => setSelector(type)}
+                                >
+                                    {typeName[type]}
+                                </button>
+                            ))}
                         </div>
                     </div>
-
-                    <RenderTyManga option={selector} />
                 </div>
-            </div>
-            <div className="2xl:basis-4/12">
-                <TopCharacter/>
+
+                <RenderTyManga option={selector} />
             </div>
         </div>
     );

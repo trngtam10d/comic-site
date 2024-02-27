@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import LazyImage from '@/utils/helpers/helpers';
 import { LikeOutlined } from '@ant-design/icons';
 import { getTopCharacters } from '@/services/api/jikan';
+import { Loading } from '@/components';
 
 export default function TopCharacter() {
     const { isLoading, data } = getTopCharacters();
@@ -11,7 +12,7 @@ export default function TopCharacter() {
         return (
             <div className="flex items-center p-2.5 border-b gap-4" key={el.mal_id}>
                 <span className={`text-2xl w-7 text-center ${0 < index + 1 && index + 1 <= 3 ? "characters" : ""}`}>
-                    { index + 1 }
+                    {index + 1}
                 </span>
                 <div className="flex flex-row gap-2.5">
                     <LazyImage
@@ -41,11 +42,15 @@ export default function TopCharacter() {
 
     return (
         <>
-            <div className="space-y-8 bg-card p-8">
-                <div className="text-xl font-bold antialiased">Top Characters</div>
-                <div className="grid grid-cols-1 gap-2">
-                    {characters}
-                </div>
+            <div className="space-y-8 bg-card p-4">
+                <div className="text-xl font-bold antialiased">Top Characters (MyAnimeList)</div>
+                {isLoading ? (
+                    <Loading />
+                ) : (
+                    <div className="grid grid-cols-1 gap-2">
+                        {characters}
+                    </div>
+                )}
             </div>
         </>
     )

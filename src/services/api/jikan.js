@@ -65,5 +65,13 @@ export function getMangaById(id) {
 }
 
 export function getTopCharacters() {
-    return handleResponse('characters', "top/characters?limit=5");
+    return handleResponse('characters', "top/characters?limit=6");
+}
+
+export function getTopReview() {
+    return handleResponse('type_review', "top/manga?filter=favorite&type=manga&limit=10")
+}
+
+export function getMangaRecommendationsById(id) {
+    return handleResponse(`manga-${id}-recommendations`, `manga/${id}/recommendations?limit=12`);
 }
